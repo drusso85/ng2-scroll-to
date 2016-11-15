@@ -1,6 +1,6 @@
 import { Directive, ElementRef, Input, HostListener } from '@angular/core';
 @Directive({
-  selector: '[appScrollTo]'
+  selector: '[scrollTo]'
 })
 export class ScrollToDirective {
   @Input() scrollableElementSelector: string;

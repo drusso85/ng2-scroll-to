@@ -10,4 +10,4 @@ First you need to install the npm module:
 ```sh
 npm install ng2-scroll-to --save
 ```
-Then import the directive and add it to the directives array of your component. In your template you may now add the `appScrollTo` attribute to elements with an href attribute pointing towards an anchor on the same page (e.g. #anchor).
+Then import the directive and add it to the directives array of your component. In your template you may now add the `scrollTo` attribute to elements with an href attribute pointing towards an anchor on the same page (e.g. #anchor).
