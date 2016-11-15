@@ -1,0 +1,27 @@
+{
+  "name": "ng2-scroll-to",
+  "version": "1.0.0",
+  "description": "angular 2 library to animate scrolling to anchor links.",
+  "main": "index.js",
+  "scripts": {
+  	"prepublish": "tsc"
+  	},
+  "typings": "./scrollTo.d.ts",
+  "keywords": [
+    "smooth",
+    "scroll",
+    "angular2",
+    "scrollto"
+  ],
+  "author": "villico85",
+  "license": "MIT",
+  "dependencies": {
+    "@angular/core": "~2.1.2"
+  },
+  "devDependencies": {
+    "@types/core-js": "^0.9.34",
+    "rxjs": "^5.0.0-beta.12",
+    "typescript": "^2.0.9",
+    "zone.js": "^0.6.26"
+  }
+}
