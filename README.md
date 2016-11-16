@@ -59,6 +59,6 @@ export class AwesomeComponent {
 
 **href**  *string* Element target for scroll.
 
-**scrollYTarget** *number*  Vertical target for scroll.
+**scrollYTarget** *number* Y axis target for scroll.
 
 **scrollableElementSelector** *string* Scrollable element selector. Sometimes there multiple scrollable elements in your page. Through this attribute you may specify it.
