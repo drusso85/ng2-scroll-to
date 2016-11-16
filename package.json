@@ -1,6 +1,6 @@
 {
   "name": "ng2-scroll-to",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "angular 2 library to animate scrolling to anchor links.",
   "main": "index.js",
   "scripts": {
