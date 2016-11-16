@@ -38,9 +38,9 @@ In your template you may now add the `scrollTo` attribute to anchors elements.
    template: `...
         <a scrollTo href="#main-section">Scroll to main section</a>
         <button scrollTo scrollTargetSelector="#test-section">Scroll to test section</a>
-        <button scrollTo scrollableElementSelector="body" scrollYTarget="0">Go top</a>
+        <button scrollTo scrollableElementSelector="#container" scrollYTarget="0">Go top</a>
         <!-- Further content here -->
-        <div class="container">
+        <div id="container">
             <section id="main-section">Bla bla bla</section>
             <section id="test-section">Bla bla bla</section>
         <div>
@@ -61,4 +61,4 @@ export class AwesomeComponent {
 
 **scrollYTarget** *number* Y axis target for scroll.
 
-**scrollableElementSelector** *string* Scrollable element selector. Sometimes there multiple scrollable elements in your page. Through this attribute you may specify it.
+**scrollableElementSelector** *string* Scrollable element selector. Sometimes there are multiple scrollable elements in your page; through this attribute you may specify the element you want to scroll.
