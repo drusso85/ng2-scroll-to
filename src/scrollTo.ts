@@ -2,17 +2,20 @@ import { Directive, ElementRef, Input, HostListener } from '@angular/core';
 @Directive({
   selector: '[scrollTo]'
 })
-export class ScrollToDirective {
+export class ScrollTo {
   @Input() scrollableElementSelector: string;
   @Input() scrollTargetSelector: string;
-  @Input() scrollYTarget: string;
+  @Input() scrollYTarget: number;
 
   constructor(private el: ElementRef) { }
   @HostListener('click', ['$event']) onClick(event: MouseEvent) {
     event.preventDefault();
     let scrollEnd: number;
     if (this.scrollYTarget) {
-      scrollEnd = Number(this.scrollYTarget);
+      if(isNaN(Number(this.scrollYTarget))){
+        throw "scrollYTarget must have numerical values";  
+      }
+      scrollEnd = this.scrollYTarget;
     }
     let target: HTMLElement;
     if (scrollEnd == null) {

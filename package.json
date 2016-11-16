@@ -1,17 +1,21 @@
 {
   "name": "ng2-scroll-to",
-  "version": "1.0.1",
-  "description": "angular 2 library to animate scrolling to anchor links.",
-  "main": "index.js",
+  "version": "1.0.1a",
+  "description": "angular 2 library to animate scrolling.",
+  "main": "./ng2-scroll-to.js",
+  "module": "./ng2-scroll-to.js",
   "scripts": {
-  	"prepublish": "tsc"
-  	},
-  "typings": "./scrollTo.d.ts",
+    "prepublish": "tsc"
+  },
+  "typings": "./ng2-scroll-to.d.ts",
   "keywords": [
     "smooth",
     "scroll",
+    "smoothScroll",
+    "angular 2",
     "angular2",
-    "scrollto"
+    "scrollTo",
+    "scrollTop"
   ],
   "author": "villico85",
   "license": "MIT",
@@ -23,5 +27,10 @@
     "rxjs": "^5.0.0-beta.12",
     "typescript": "^2.0.9",
     "zone.js": "^0.6.26"
+  },
+    "repository": {
+    "type": "git",
+    "url": "git+https://github.com/drusso85/ng2-scroll-to"
   }
+  
 }

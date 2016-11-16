@@ -1,1 +1,1 @@
-export {ScrollToDirective} from './src/scrollTo';
+export {ScrollTo} from './src/scrollTo';

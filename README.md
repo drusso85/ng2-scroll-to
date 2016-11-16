@@ -2,7 +2,7 @@
 angular 2 library to animate scrolling to anchor links.
 
 ## Features
-- jump to the top edge of an element referenced in the href-attribute (`href="#mytarget"` or `scrollTargetSelector="#mytarget"`)
+- jump to the top edge of an element referenced in the href attribute (`href="#mytarget"`) or scrollTargetSelector attribute(`scrollTargetSelector="#mytarget"`)
 - jump to the the to given coordinates (`scrollYTarget="0"`)
 
 ## Install
@@ -11,10 +11,11 @@ npm install ng2-scroll-to --save
 ```
 ## Usage
 Import the directive and add it to the directives array of your component. 
-// app.module.ts
+
 
 
 ```typescript
+// app.module.ts
 import {ScrollToDirective} from 'ng2-scroll-to';
 
 @NgModule({
@@ -26,14 +27,38 @@ import {ScrollToDirective} from 'ng2-scroll-to';
 export class AppModule {
 }
 ```
-In your template you may now add the `scrollTo` attribute to anchors elements with an href attribute pointing towards an anchor on the same page (e.g. #anchor) or to others html elements adding `scrollTargetSelector` or `scrollYTarget` attributes.
+
+
+In your template you may now add the `scrollTo` attribute to anchors elements.
+
+```typescript
+// app.awesome.component.ts
+@Component({
+   ...
+   template: `...
+        <a scrollTo href="#main-section">Scroll to main section</a>
+        <button scrollTo scrollTargetSelector="#test-section">Scroll to test section</a>
+        <button scrollTo scrollableElementSelector="body" scrollYTarget="0">Go top</a>
+        <!-- Further content here -->
+        <div class="container">
+            <section id="main-section">Bla bla bla</section>
+            <section id="test-section">Bla bla bla</section>
+        <div>
+   ...`,
+})
+export class AwesomeComponent {
+}
+```
+
 
 ## Attributes
 
-**scrollTo** required
+**scrollTo** *required*
 
-**scrollableElementSelector** 
+**scrollTargetSelector**  *string* Element target for scroll.
 
-**scrollTargetSelector**
+**href**  *string* Element target for scroll.
 
-**scrollYTarget**
+**scrollYTarget** *number*  Vertical target for scroll.
+
+**scrollableElementSelector** *string* Scrollable element selector. Sometimes there multiple scrollable elements in your page. Through this attribute you may specify it.
