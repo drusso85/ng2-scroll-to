@@ -26,7 +26,7 @@ import {ScrollToDirective} from 'ng2-scroll-to';
 export class AppModule {
 }
 ```
-In your template you may now add the `scrollTo` attribute to elements with an href attribute pointing towards an anchor on the same page (e.g. #anchor).
+In your template you may now add the `scrollTo` attribute to anchors elements with an href attribute pointing towards an anchor on the same page (e.g. #anchor) or to others html elements adding `scrollTargetSelector` or `scrollYTarget` attributes.
 
 ## Attributes
 
