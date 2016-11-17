@@ -16,12 +16,12 @@ Import the directive and add it to the directives array of your component.
 
 ```typescript
 // app.module.ts
-import {ScrollToDirective} from 'ng2-scroll-to';
+import {ScrollTo} from 'ng2-scroll-to';
 
 @NgModule({
     imports: [
          ....,
-        ScrollToDirective
+        ScrollTo
         ]
 })
 export class AppModule {

@@ -1,6 +1,6 @@
 {
   "name": "ng2-scroll-to",
-  "version": "1.0.1a",
+  "version": "1.0.1b",
   "description": "angular 2 library to animate scrolling.",
   "main": "./ng2-scroll-to.js",
   "module": "./ng2-scroll-to.js",
