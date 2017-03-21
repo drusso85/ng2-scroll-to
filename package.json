@@ -1,6 +1,6 @@
 {
   "name": "ng2-scroll-to",
-  "version": "1.0.3",
+  "version": "1.0.3-beta",
   "description": "angular 2 library to animate scrolling.",
   "scripts": {
     "build": "ngc -p tsconfig.json",
@@ -24,8 +24,17 @@
     "scrollTop"
   ],
   "license": "MIT",
-  "main": "./dist/index.js",
+  "main": "./index.js",
   "dependencies": {},
+  "peerDependencies": {
+    "@angular/core": "^2.4.0",
+    "@angular/common": "^2.4.0",
+    "@angular/compiler": "^2.4.5",
+    "@angular/platform-browser": "^2.4.5",
+    "@angular/router": "^3.2.0",
+    "rxjs": "^5.0.1",
+    "zone.js": "^0.7.2"
+  },  
   "devDependencies": {
     "@angular/core": "^2.4.0",
     "@angular/common": "^2.4.0",
