@@ -145,7 +145,7 @@ export class ScrollTo {
     let scrollableElement: HTMLElement;
     let i = 0;
     if (this.isScriptTag(inputElement)) {
-      return;
+      return null;
     }
     while (scrollableElement == null && i < inputElement.childElementCount) {
       let element = <HTMLElement>inputElement.children[i];

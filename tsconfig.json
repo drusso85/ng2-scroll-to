@@ -1,17 +1,26 @@
 {
-    "compilerOptions": {
-        "noImplicitAny": true,
-        "module": "commonjs",
-        "target": "ES5",
-        "emitDecoratorMetadata": true,
-        "experimentalDecorators": true,
-        "sourceMap": true,
-        "declaration": true
-    },
-    "files": [
-        "ng2-scroll-to.ts"
-    ],
-    "exclude": [
-        "node_modules"
+  "compilerOptions": {
+    "noImplicitAny": true,
+    "module": "commonjs",
+    "target": "ES5",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "allowUnusedLabels": false,
+    "noImplicitReturns": true,
+    "sourceMap": true,
+    "declaration": true,
+    "outDir": "./dist",
+    "typeRoots": [
+      "node_modules/@types"
     ]
+  },
+  "exclude": [
+    "node_modules",
+    "dist",
+    "**/*.spec.ts"
+  ],
+  "angularCompilerOptions": {
+    "strictMetadataEmit": true,
+    "genDir": "compiled"
+  }
 }

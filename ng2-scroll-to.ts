@@ -1,1 +1,0 @@
-export {ScrollTo} from './src/scrollTo';
