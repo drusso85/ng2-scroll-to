@@ -10,7 +10,7 @@ angular 2 library to animate scrolling to anchor links.
 npm install ng2-scroll-to --save
 ```
 ## Usage
-Import the directive and add it to the directives array of your component. 
+Import ScrollToModule and add it to the imports array of your component. 
 
 
 
