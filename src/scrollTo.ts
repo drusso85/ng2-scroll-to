@@ -12,8 +12,8 @@ export class ScrollTo {
     event.preventDefault();
     let scrollEnd: number;
     if (this.scrollYTarget) {
-      if(isNaN(Number(this.scrollYTarget))){
-        throw "scrollYTarget must have numerical values";  
+      if (isNaN(Number(this.scrollYTarget))) {
+        throw 'scrollYTarget must have numerical values';
       }
       scrollEnd = this.scrollYTarget;
     }
@@ -27,6 +27,12 @@ export class ScrollTo {
       scrollEnd = target.offsetTop;
     }
     let scrollingElement: HTMLElement = this.getScrollableElement(target);
+    try {
+      if (scrollingElement === document.body) {
+        this.smoothScroll(document.documentElement, scrollEnd);
+      }
+    } catch (e) { console.warn(e) }
+
     this.smoothScroll(scrollingElement, scrollEnd);
   }
 
@@ -52,11 +58,6 @@ export class ScrollTo {
     }
     return target;
   }
-
-/*  private smoothScrollByElement(element: HTMLElement, target: HTMLElement): void {
-    this.smoothScroll(element, target.offsetTop);
-  }
-*/
 
   private smoothScroll(element: HTMLElement, end: number): void {
     const duration = 500;
@@ -120,7 +121,7 @@ export class ScrollTo {
 
   /**
     * finds scrollable parent of an element
-    * @method findScrollableParent
+    * @method findMainScrollableElement
     * @returns {HTMLElement} element
     */
   private findMainScrollableElement(): HTMLElement {
