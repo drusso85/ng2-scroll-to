@@ -63,4 +63,4 @@ export class AwesomeComponent {
 
 **scrollableElementSelector** *string* Scrollable element selector. Sometimes there are multiple scrollable elements in your page; through this attribute you may specify the element you want to scroll.
 
-**scrollOffSet**  *string* Top offset to compensate for negative top margins.
+**scrollOffSet**  *number* Top offset to compensate for negative top margins.
