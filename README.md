@@ -10,7 +10,7 @@ angular 2 library to animate scrolling to anchor links.
 npm install ng2-scroll-to --save
 ```
 ## Usage
-Import ScrollToModule and add it to the imports array of your component. 
+Import ScrollToModule and add it to the imports array of your component.
 
 
 
@@ -62,3 +62,5 @@ export class AwesomeComponent {
 **scrollYTarget** *number* Y axis target for scroll.
 
 **scrollableElementSelector** *string* Scrollable element selector. Sometimes there are multiple scrollable elements in your page; through this attribute you may specify the element you want to scroll.
+
+**scrollOffSet**  *string* Top offset to compensate for negative top margins.
