@@ -6,6 +6,7 @@ export class ScrollTo {
   @Input() scrollableElementSelector: string;
   @Input() scrollTargetSelector: string;
   @Input() scrollYTarget: number;
+  @Input() scrollOffSet: number;
 
   constructor(private el: ElementRef) { }
   @HostListener('click', ['$event']) onClick(event: MouseEvent) {
@@ -65,6 +66,13 @@ export class ScrollTo {
     const requestAnimationFrame = window.requestAnimationFrame || function (fn) {
       window.setTimeout(fn, 15);
     };
+	let offset:number = 0;
+	if (this.scrollOffSet) {
+		if (isNaN(Number(this.scrollOffSet))) {
+			throw 'scrollOffSet must have numerical values';
+		}
+		end -= this.scrollOffSet;
+	}
     const start: number = element.scrollTop;
     let step = () => {
       let elapsed = Date.now() - clock;
