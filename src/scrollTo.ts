@@ -12,7 +12,7 @@ export class ScrollTo {
   @HostListener('click', ['$event']) onClick(event: MouseEvent) {
     event.preventDefault();
     let scrollEnd: number;
-    if (this.scrollYTarget) {
+    if (!isNaN(this.scrollYTarget)) {
       if (isNaN(Number(this.scrollYTarget))) {
         throw 'scrollYTarget must have numerical values';
       }
