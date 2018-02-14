@@ -1,4 +1,5 @@
-import { Directive, ElementRef, Input, HostListener } from '@angular/core';
+import { Directive, ElementRef, Input, HostListener, Output, EventEmitter } from '@angular/core';
+
 @Directive({
   selector: '[scrollTo]'
 })
@@ -7,6 +8,7 @@ export class ScrollTo {
   @Input() scrollTargetSelector: string;
   @Input() scrollYTarget: number;
   @Input() scrollOffSet: number;
+  @Output() notifiyScrollToDone = new EventEmitter();
 
   constructor(private el: ElementRef) { }
   @HostListener('click', ['$event']) onClick(event: MouseEvent) {
@@ -79,6 +81,7 @@ export class ScrollTo {
       let position = this.position(start, end, elapsed, duration);
       element.scrollTop = position;
       if (elapsed > duration) {
+        this.notifiyScrollToDone.emit();
       } else {
         requestAnimationFrame(step);
       }
